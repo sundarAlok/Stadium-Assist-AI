@@ -1,3 +1,5 @@
+import type { FaqItem } from "../types";
+
 export const FAQS: FaqItem[] = [
   {
     q: "When do the stadium gates open?",
