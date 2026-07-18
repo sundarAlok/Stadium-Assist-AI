@@ -11,8 +11,8 @@ import {
   Utensils, 
   AlertCircle, 
   Trash2,
-  Info,
   Layers,
+  Info,
   Sparkles,
   Search,
   CheckCircle2,
@@ -23,6 +23,7 @@ import {
   ShieldAlert,
   X
 } from "lucide-react";
+import logo from "../assets/logo.png";
 import { motion, AnimatePresence } from "motion/react";
 import { Message } from "./types";
 
@@ -202,7 +203,7 @@ const MARKED_LOCATIONS: MarkedLocation[] = [
     borderColor: "border-pink-500/20",
     borderHoverColor: "border-pink-500/50",
     bgColor: "bg-pink-950/20",
-    glowClass: "shadow-[0_0_15px_rgba(236,72,153,0.5)]",
+    glowClass: "shadow-[0_0_15px_rgba(236,72,153,0)]",
     badgeBg: "bg-pink-500/10",
     accentColor: "pink",
     position: "top-[52%] left-[16%]",
@@ -222,7 +223,7 @@ const MARKED_LOCATIONS: MarkedLocation[] = [
     borderColor: "border-rose-500/20",
     borderHoverColor: "border-rose-500/50",
     bgColor: "bg-rose-950/20",
-    glowClass: "shadow-[0_0_15px_rgba(244,63,94,0.5)]",
+    glowClass: "shadow-[0_0_15px_rgba(244,63,94,0)]",
     badgeBg: "bg-rose-500/10",
     accentColor: "rose",
     position: "top-[50%] left-[84%]",
@@ -242,7 +243,7 @@ const MARKED_LOCATIONS: MarkedLocation[] = [
     borderColor: "border-orange-500/20",
     borderHoverColor: "border-orange-500/50",
     bgColor: "bg-orange-950/20",
-    glowClass: "shadow-[0_0_15px_rgba(249,115,22,0.5)]",
+    glowClass: "shadow-[0_0_15px_rgba(249,115,22,0)]",
     badgeBg: "bg-orange-500/10",
     accentColor: "orange",
     position: "top-[34%] left-[28%]",
@@ -262,7 +263,7 @@ const MARKED_LOCATIONS: MarkedLocation[] = [
     borderColor: "border-lime-500/20",
     borderHoverColor: "border-lime-500/50",
     bgColor: "bg-lime-950/20",
-    glowClass: "shadow-[0_0_15px_rgba(132,204,22,0.5)]",
+    glowClass: "shadow-[0_0_15px_rgba(132,204,22,0)]",
     badgeBg: "bg-lime-500/10",
     accentColor: "lime",
     position: "top-[64%] left-[68%]",
@@ -282,7 +283,7 @@ const MARKED_LOCATIONS: MarkedLocation[] = [
     borderColor: "border-teal-500/20",
     borderHoverColor: "border-teal-500/50",
     bgColor: "bg-teal-950/20",
-    glowClass: "shadow-[0_0_15px_rgba(20,184,166,0.5)]",
+    glowClass: "shadow-[0_0_15px_rgba(20,184,166,0)]",
     badgeBg: "bg-teal-500/10",
     accentColor: "teal",
     position: "top-[24%] left-[64%]",
@@ -656,16 +657,16 @@ export default function App() {
                   selectLocation(matching);
                   setActiveTab("home");
                 }}
-                className={`inline-flex items-center gap-1 cursor-pointer hover:underline ${matching.badgeBg} ${matching.textColor} border ${matching.borderColor} px-2 py-0.5 rounded-lg font-mono text-xs font-bold mx-1`}
+                className={`inline-flex items-center gap-1 cursor-pointer hover:underline ${matching.badgeBg} ${matching.textColor} border ${matching.borderColor} px-2 py-0 rounded-lg font-mono text-xs font-bold mx-1`}
               >
-                <matching.icon className="w-3.5 h-3.5" /> {matching.name}
+                <matching.icon className="w-3 h-3" /> {matching.name}
               </span>
             );
           }
           if (part === "Green Garden Grill") {
             return (
-              <span key={index} className="inline-flex items-center gap-1 bg-emerald-500/10 text-emerald-300 border border-emerald-500/20 px-2 py-0.5 rounded-lg font-mono text-xs font-bold mx-1">
-                <Sparkles className="w-3.5 h-3.5 text-emerald-400" /> Green Garden Grill
+              <span key={index} className="inline-flex items-center gap-1 bg-emerald-500/10 text-emerald-300 border border-emerald-500/20 px-2 py-0 rounded-lg font-mono text-xs font-bold mx-1">
+                <Sparkles className="w-3 h-3 text-emerald-400" /> Green Garden Grill
               </span>
             );
           }
@@ -743,12 +744,16 @@ export default function App() {
       <header className="py-5 px-6 md:px-8 border-b border-slate-900 bg-slate-950/80 backdrop-blur-md sticky top-0 z-40">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center shadow-lg shadow-indigo-500/30">
-              <Layers className="h-5.5 w-5.5 text-white" aria-hidden="true" />
-            </div>
+            <div className="w-10 h-10 rounded-xl flex items-center justify-center overflow-hidden">
+            <img
+              src={logo}
+              alt="Stadium Assist AI Logo"
+              className="w-full h-full object-contain"
+            />
+          </div>
             <div>
               <h1 className="text-xl font-bold tracking-tight text-white flex items-center gap-2 font-display">
-                STADIUM ASSIST <span className="text-indigo-400 font-mono text-xs border border-indigo-500/30 px-2 py-0.5 rounded ml-1">AI</span>
+                STADIUM ASSIST <span className="text-indigo-400 font-mono text-xs border border-indigo-500/30 px-2 py-0 rounded ml-1">AI</span>
               </h1>
               <p className="text-[9px] text-slate-400 uppercase tracking-widest font-mono">100% Grounded Navigation & Arena Support</p>
             </div>
@@ -758,7 +763,7 @@ export default function App() {
           <nav className="flex items-center bg-slate-900 border border-slate-800 p-1 rounded-2xl" aria-label="Main Navigation">
             <button
               onClick={() => setActiveTab("home")}
-              className={`flex items-center gap-1.5 md:gap-2 px-3.5 md:px-5 py-2 rounded-xl text-xs md:text-sm font-semibold transition-all cursor-pointer ${
+              className={`flex items-center gap-1 md:gap-2 px-3 md:px-5 py-2 rounded-xl text-xs md:text-sm font-semibold transition-all cursor-pointer ${
                 activeTab === "home"
                   ? "bg-indigo-600 text-white shadow-lg shadow-indigo-500/25"
                   : "text-slate-400 hover:text-white hover:bg-slate-850"
@@ -767,12 +772,12 @@ export default function App() {
               aria-selected={activeTab === "home"}
               role="tab"
             >
-              <MapPin className="w-3.5 h-3.5" />
+              <MapPin className="w-3 h-3" />
               <span>Home</span>
             </button>
             <button
               onClick={() => setActiveTab("chat")}
-              className={`flex items-center gap-1.5 md:gap-2 px-3.5 md:px-5 py-2 rounded-xl text-xs md:text-sm font-semibold transition-all cursor-pointer ${
+              className={`flex items-center gap-1 md:gap-2 px-3 md:px-5 py-2 rounded-xl text-xs md:text-sm font-semibold transition-all cursor-pointer ${
                 activeTab === "chat"
                   ? "bg-indigo-600 text-white shadow-lg shadow-indigo-500/25"
                   : "text-slate-400 hover:text-white hover:bg-slate-850"
@@ -781,12 +786,12 @@ export default function App() {
               aria-selected={activeTab === "chat"}
               role="tab"
             >
-              <Bot className="w-3.5 h-3.5" />
+              <Bot className="w-3 h-3" />
               <span>AI Chat</span>
             </button>
             <button
               onClick={() => setActiveTab("dashboard")}
-              className={`flex items-center gap-1.5 md:gap-2 px-3.5 md:px-5 py-2 rounded-xl text-xs md:text-sm font-semibold transition-all cursor-pointer ${
+              className={`flex items-center gap-1 md:gap-2 px-3 md:px-5 py-2 rounded-xl text-xs md:text-sm font-semibold transition-all cursor-pointer ${
                 activeTab === "dashboard"
                   ? "bg-indigo-600 text-white shadow-lg shadow-indigo-500/25"
                   : "text-slate-400 hover:text-white hover:bg-slate-850"
@@ -795,12 +800,12 @@ export default function App() {
               aria-selected={activeTab === "dashboard"}
               role="tab"
             >
-              <Activity className="w-3.5 h-3.5" />
+              <Activity className="w-3 h-3" />
               <span>Dashboard</span>
             </button>
             <button
               onClick={() => setActiveTab("faq")}
-              className={`flex items-center gap-1.5 md:gap-2 px-3.5 md:px-5 py-2 rounded-xl text-xs md:text-sm font-semibold transition-all cursor-pointer ${
+              className={`flex items-center gap-1 md:gap-2 px-3 md:px-5 py-2 rounded-xl text-xs md:text-sm font-semibold transition-all cursor-pointer ${
                 activeTab === "faq"
                   ? "bg-indigo-600 text-white shadow-lg shadow-indigo-500/25"
                   : "text-slate-400 hover:text-white hover:bg-slate-850"
@@ -809,7 +814,7 @@ export default function App() {
               aria-selected={activeTab === "faq"}
               role="tab"
             >
-              <HelpCircle className="w-3.5 h-3.5" />
+              <HelpCircle className="w-3 h-3" />
               <span>FAQ</span>
             </button>
           </nav>
@@ -833,19 +838,19 @@ export default function App() {
               {/* Informative Callout Banner */}
               <div className="bg-indigo-950/20 border border-indigo-500/15 rounded-3xl p-4 md:p-5 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
                 <div>
-                  <h2 className="text-sm font-bold text-slate-200 flex items-center gap-1.5">
+                  <h2 className="text-sm font-bold text-slate-200 flex items-center gap-1">
                     <Sparkles className="w-4 h-4 text-indigo-400" /> Interactive Seating & Landmark Map
                   </h2>
-                  <p className="text-xs text-slate-400 mt-0.5">Pulsing pins represent verified locations in the grounded stadium.json directory. Hover to preview, click to inspect features.</p>
+                  <p className="text-xs text-slate-400 mt-0">Pulsing pins represent verified locations in the grounded stadium.json directory. Hover to preview, click to inspect features.</p>
                 </div>
                 <div className="flex gap-2 shrink-0">
-                  <span className="text-[10px] bg-indigo-500/10 text-indigo-400 px-2.5 py-1 rounded-xl border border-indigo-500/20 font-mono font-semibold">21 Active Hotspots</span>
-                  <span className="text-[10px] bg-emerald-500/10 text-emerald-400 px-2.5 py-1 rounded-xl border border-emerald-500/20 font-mono font-semibold">Live Interactive Sync</span>
+                  <span className="text-[10px] bg-indigo-500/10 text-indigo-400 px-2 py-1 rounded-xl border border-indigo-500/20 font-mono font-semibold">21 Active Hotspots</span>
+                  <span className="text-[10px] bg-emerald-500/10 text-emerald-400 px-2 py-1 rounded-xl border border-emerald-500/20 font-mono font-semibold">Live Interactive Sync</span>
                 </div>
               </div>
 
               {/* Interactive map split card */}
-              <section className="bg-slate-900 border border-slate-800 rounded-3xl overflow-hidden p-1.5 flex flex-col" aria-label="Interactive Seating Map">
+              <section className="bg-slate-900 border border-slate-800 rounded-3xl overflow-hidden p-1 flex flex-col" aria-label="Interactive Seating Map">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-3 min-h-[420px]">
                   
                   {/* Map canvas */}
@@ -865,15 +870,15 @@ export default function App() {
                       
                       let sizeClasses = "w-4 h-4";
                       let pingClasses = "w-4 h-4";
-                      let innerCircleClasses = "w-1.5 h-1.5";
+                      let innerCircleClasses = "w-1 h-1";
                       if (loc.size === "big") {
                         sizeClasses = "w-7 h-7";
                         pingClasses = "w-7 h-7";
-                        innerCircleClasses = "w-2.5 h-2.5";
+                        innerCircleClasses = "w-2 h-2";
                       } else if (loc.size === "medium") {
                         sizeClasses = "w-5 h-5";
                         pingClasses = "w-5 h-5";
-                        innerCircleClasses = "w-1.5 h-1.5";
+                        innerCircleClasses = "w-1 h-1";
                       } else {
                         sizeClasses = "w-3 h-3";
                         pingClasses = "w-3 h-3";
@@ -894,7 +899,7 @@ export default function App() {
 
                             {/* HOVER DETAILS */}
                             <div 
-                              className="absolute bottom-full mb-2.5 left-1/2 -translate-x-1/2 bg-slate-900/95 border border-slate-750 p-2 rounded-xl backdrop-blur-md flex items-center gap-2 text-[10px] font-bold font-mono text-slate-200 select-none pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-200 shadow-[0_4px_20px_rgba(0,0,0,0.8)] whitespace-nowrap z-50 border-t-2"
+                              className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 bg-slate-900/95 border border-slate-750 p-2 rounded-xl backdrop-blur-md flex items-center gap-2 text-[10px] font-bold font-mono text-slate-200 select-none pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-200 shadow-[0_4px_20px_rgba(0,0,0,0.8)] whitespace-nowrap z-50 border-t-2"
                               style={{ borderColor: `var(--color-${loc.accentColor}-500)` }}
                             >
                               <span className={`w-2 h-2 rounded-full ${loc.dotClass}`}></span>
@@ -908,10 +913,10 @@ export default function App() {
                     })}
 
                     {/* Legend */}
-                    <div className="absolute bottom-4 left-4 bg-slate-900/90 border border-slate-850 p-2.5 rounded-xl backdrop-blur-md flex items-center gap-3.5 text-[9px] font-mono text-slate-400 select-none pointer-events-none">
-                      <span className="flex items-center gap-1"><span className="w-2.5 h-2.5 rounded-full bg-indigo-500"></span> Main Hub</span>
+                    <div className="absolute bottom-4 left-4 bg-slate-900/90 border border-slate-850 p-2 rounded-xl backdrop-blur-md flex items-center gap-3 text-[9px] font-mono text-slate-400 select-none pointer-events-none">
+                      <span className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-indigo-500"></span> Main Hub</span>
                       <span className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-pink-500"></span> Medium Concourse</span>
-                      <span className="flex items-center gap-1"><span className="w-1.5 h-1.5 rounded-full bg-slate-400"></span> Small Spot</span>
+                      <span className="flex items-center gap-1"><span className="w-1 h-1 rounded-full bg-slate-400"></span> Small Spot</span>
                     </div>
                   </div>
 
@@ -920,7 +925,7 @@ export default function App() {
                     <div className="lg:col-span-5 bg-slate-900/90 rounded-2xl p-5 border border-slate-850 flex flex-col justify-between relative shadow-xl">
                       <button 
                         onClick={() => setIsSidebarOpen(false)}
-                        className="absolute top-4 right-4 p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer z-10"
+                        className="absolute top-4 right-4 p-1 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer z-10"
                         aria-label="Close details panel"
                       >
                         <X className="w-4 h-4" />
@@ -928,13 +933,13 @@ export default function App() {
 
                       <div>
                         <div className="flex items-center justify-between mb-3 pr-6">
-                          <span className={`text-[9px] font-bold font-mono tracking-wider uppercase px-2 py-0.5 rounded-md ${selectedLoc.badgeBg} ${selectedLoc.textColor} border ${selectedLoc.borderColor}`}>
+                          <span className={`text-[9px] font-bold font-mono tracking-wider uppercase px-2 py-0 rounded-md ${selectedLoc.badgeBg} ${selectedLoc.textColor} border ${selectedLoc.borderColor}`}>
                             {selectedLoc.type}
                           </span>
                           <span className="text-[10px] font-mono text-slate-500">Selected Landmark</span>
                         </div>
 
-                        <div className="flex items-center gap-2.5 mb-3">
+                        <div className="flex items-center gap-2 mb-3">
                           <div className={`w-9 h-9 rounded-xl ${selectedLoc.badgeBg} ${selectedLoc.textColor} flex items-center justify-center border ${selectedLoc.borderColor}`}>
                             <selectedLoc.icon className="w-5 h-5" />
                           </div>
@@ -950,11 +955,11 @@ export default function App() {
                           {selectedLoc.details}
                         </p>
 
-                        <div className="space-y-1.5">
+                        <div className="space-y-1">
                           <p className="text-[9px] text-slate-500 uppercase tracking-widest font-bold font-mono">Key Features</p>
-                          <div className="flex flex-wrap gap-1.5">
+                          <div className="flex flex-wrap gap-1">
                             {selectedLoc.features.map((feat, i) => (
-                              <span key={i} className="text-[10px] font-semibold px-2 py-0.5 rounded-md bg-slate-950 border border-slate-800 text-slate-300">
+                              <span key={i} className="text-[10px] font-semibold px-2 py-0 rounded-md bg-slate-950 border border-slate-800 text-slate-300">
                                 • {feat}
                               </span>
                             ))}
@@ -965,10 +970,10 @@ export default function App() {
                       <div className="mt-4 pt-3 border-t border-slate-800/60">
                         <button
                           onClick={() => queryLocation(selectedLoc)}
-                          className={`w-full inline-flex items-center justify-between p-2.5 rounded-xl border text-xs font-semibold tracking-wide transition-all duration-200 active:scale-97 cursor-pointer text-white ${selectedLoc.borderColor} ${selectedLoc.bgColor} hover:bg-slate-950`}
+                          className={`w-full inline-flex items-center justify-between p-2 rounded-xl border text-xs font-semibold tracking-wide transition-all duration-200 active:scale-97 cursor-pointer text-white ${selectedLoc.borderColor} ${selectedLoc.bgColor} hover:bg-slate-950`}
                         >
                           <span className="flex items-center gap-2">
-                            <Sparkles className="w-3.5 h-3.5 text-indigo-400" />
+                            <Sparkles className="w-3 h-3 text-indigo-400" />
                             Ask AI Guide about {selectedLoc.name}
                           </span>
                           <ArrowRight className="w-4 h-4" />
@@ -987,56 +992,56 @@ export default function App() {
                 <section className="bg-slate-900 border border-slate-800 rounded-3xl p-5 flex flex-col justify-between" aria-label="Grounded Food Vendors">
                    <div>
                      <div className="flex items-center justify-between mb-4 border-b border-slate-800 pb-2">
-                        <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest font-mono flex items-center gap-1.5">
-                          <Utensils className="w-3.5 h-3.5 text-emerald-400" /> Grounded Food Directory
+                        <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest font-mono flex items-center gap-1">
+                          <Utensils className="w-3 h-3 text-emerald-400" /> Grounded Food Directory
                         </h3>
                         <span className="text-[9px] font-bold text-emerald-400 font-mono tracking-widest uppercase">Verified</span>
                      </div>
                      
-                     <div className="space-y-2.5">
+                     <div className="space-y-2">
                         <button
                           onClick={() => {
                             const loc = MARKED_LOCATIONS.find(l => l.id === "sec-104");
                             if (loc) selectLocation(loc);
                           }}
-                          className={`w-full flex items-center justify-between p-2.5 bg-slate-950/40 hover:bg-slate-950 border ${activeLocationId === "sec-104" ? "border-emerald-500/40 bg-emerald-950/5" : "border-slate-800/80"} hover:border-emerald-500/40 rounded-xl transition-all text-left cursor-pointer`}
+                          className={`w-full flex items-center justify-between p-2 bg-slate-950/40 hover:bg-slate-950 border ${activeLocationId === "sec-104" ? "border-emerald-500/40 bg-emerald-950/5" : "border-slate-800/80"} hover:border-emerald-500/40 rounded-xl transition-all text-left cursor-pointer`}
                         >
-                           <div className="flex items-center gap-2.5">
+                           <div className="flex items-center gap-2">
                               <div className="w-7 h-7 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-400 font-bold text-xs">V</div>
                               <div>
                                 <p className="text-xs font-bold text-slate-200">Vegetarian Hub (Sec 104)</p>
                                 <p className="text-[9px] text-slate-500 font-mono">Green Garden Grill</p>
                               </div>
                            </div>
-                           <span className="text-[10px] font-mono text-emerald-400 bg-emerald-500/5 px-2 py-0.5 rounded border border-emerald-500/10">SEC 104</span>
+                           <span className="text-[10px] font-mono text-emerald-400 bg-emerald-500/5 px-2 py-0 rounded border border-emerald-500/10">SEC 104</span>
                         </button>
 
                         <button
                           onClick={() => handleSendMessage("Do you have gluten free food?")}
-                          className="w-full flex items-center justify-between p-2.5 bg-slate-950/40 hover:bg-slate-950 border border-slate-800/80 hover:border-emerald-500/20 rounded-xl transition-all text-left cursor-pointer"
+                          className="w-full flex items-center justify-between p-2 bg-slate-950/40 hover:bg-slate-950 border border-slate-800/80 hover:border-emerald-500/20 rounded-xl transition-all text-left cursor-pointer"
                         >
-                           <div className="flex items-center gap-2.5">
+                           <div className="flex items-center gap-2">
                               <div className="w-7 h-7 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-400 font-bold text-xs">GF</div>
                               <div>
                                 <p className="text-xs font-bold text-slate-200">Gluten-Free Grill</p>
                                 <p className="text-[9px] text-slate-500 font-mono">Green Garden Grill</p>
                               </div>
                            </div>
-                           <span className="text-[10px] font-mono text-emerald-400 bg-emerald-500/5 px-2 py-0.5 rounded border border-emerald-500/10">SEC 104</span>
+                           <span className="text-[10px] font-mono text-emerald-400 bg-emerald-500/5 px-2 py-0 rounded border border-emerald-500/10">SEC 104</span>
                         </button>
 
                         <button
                           onClick={() => handleSendMessage("Find halal food options.")}
-                          className="w-full flex items-center justify-between p-2.5 bg-slate-950/40 hover:bg-slate-950 border border-slate-800/80 hover:border-emerald-500/20 rounded-xl transition-all text-left cursor-pointer"
+                          className="w-full flex items-center justify-between p-2 bg-slate-950/40 hover:bg-slate-950 border border-slate-800/80 hover:border-emerald-500/20 rounded-xl transition-all text-left cursor-pointer"
                         >
-                           <div className="flex items-center gap-2.5">
+                           <div className="flex items-center gap-2">
                               <div className="w-7 h-7 rounded-lg bg-amber-500/10 flex items-center justify-center text-amber-400 font-bold text-xs">H</div>
                               <div>
                                 <p className="text-xs font-bold text-slate-200">Halal Eats (Sec 208)</p>
                                 <p className="text-[9px] text-slate-500 font-mono">Plaza Level</p>
                               </div>
                            </div>
-                           <span className="text-[10px] font-mono text-emerald-400 bg-emerald-500/5 px-2 py-0.5 rounded border border-emerald-500/10">SEC 208</span>
+                           <span className="text-[10px] font-mono text-emerald-400 bg-emerald-500/5 px-2 py-0 rounded border border-emerald-500/10">SEC 208</span>
                         </button>
                      </div>
                    </div>
@@ -1047,8 +1052,8 @@ export default function App() {
                 <section className="bg-slate-900 border border-slate-800 rounded-3xl p-5 flex flex-col justify-between" aria-label="Gate Directory">
                    <div>
                      <div className="flex items-center justify-between mb-4 border-b border-slate-800 pb-2">
-                        <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest font-mono flex items-center gap-1.5">
-                          <MapPin className="w-3.5 h-3.5 text-indigo-400" /> Gate Directory
+                        <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest font-mono flex items-center gap-1">
+                          <MapPin className="w-3 h-3 text-indigo-400" /> Gate Directory
                         </h3>
                         <span className="text-[9px] font-bold text-indigo-400 font-mono tracking-widest">Active</span>
                      </div>
@@ -1059,10 +1064,10 @@ export default function App() {
                             const loc = MARKED_LOCATIONS.find(l => l.id === "gate-a");
                             if (loc) selectLocation(loc);
                           }}
-                          className={`w-full flex justify-between items-center p-2.5 rounded-xl bg-slate-950/30 hover:bg-slate-950 border ${activeLocationId === "gate-a" ? "border-indigo-500/40 bg-indigo-950/5" : "border-slate-800/50"} hover:border-indigo-500/20 text-left transition-all cursor-pointer`}
+                          className={`w-full flex justify-between items-center p-2 rounded-xl bg-slate-950/30 hover:bg-slate-950 border ${activeLocationId === "gate-a" ? "border-indigo-500/40 bg-indigo-950/5" : "border-slate-800/50"} hover:border-indigo-500/20 text-left transition-all cursor-pointer`}
                         >
                            <span className="font-bold text-slate-200 flex items-center gap-2">
-                             <span className="w-1.5 h-1.5 rounded-full bg-indigo-500"></span> Gate A
+                             <span className="w-1 h-1 rounded-full bg-indigo-500"></span> Gate A
                            </span>
                            <span className="text-[10px] text-slate-400 font-mono">Near Parking P1</span>
                         </button>
@@ -1072,10 +1077,10 @@ export default function App() {
                             const loc = MARKED_LOCATIONS.find(l => l.id === "gate-b");
                             if (loc) selectLocation(loc);
                           }}
-                          className={`w-full flex justify-between items-center p-2.5 rounded-xl bg-slate-950/30 hover:bg-slate-950 border ${activeLocationId === "gate-b" ? "border-blue-500/40 bg-blue-950/5" : "border-slate-800/50"} hover:border-indigo-500/20 text-left transition-all cursor-pointer`}
+                          className={`w-full flex justify-between items-center p-2 rounded-xl bg-slate-950/30 hover:bg-slate-950 border ${activeLocationId === "gate-b" ? "border-blue-500/40 bg-blue-950/5" : "border-slate-800/50"} hover:border-indigo-500/20 text-left transition-all cursor-pointer`}
                         >
                            <span className="font-bold text-slate-200 flex items-center gap-2">
-                             <span className="w-1.5 h-1.5 rounded-full bg-blue-500"></span> Gate B
+                             <span className="w-1 h-1 rounded-full bg-blue-500"></span> Gate B
                            </span>
                            <span className="text-[10px] text-slate-400 font-mono">Near Metro Exit</span>
                         </button>
@@ -1085,10 +1090,10 @@ export default function App() {
                             const loc = MARKED_LOCATIONS.find(l => l.id === "gate-c");
                             if (loc) selectLocation(loc);
                           }}
-                          className={`w-full flex justify-between items-center p-2.5 rounded-xl bg-slate-950/30 hover:bg-slate-950 border ${activeLocationId === "gate-c" ? "border-red-500/40 bg-red-950/5" : "border-slate-800/50"} hover:border-red-500/20 text-left transition-all cursor-pointer`}
+                          className={`w-full flex justify-between items-center p-2 rounded-xl bg-slate-950/30 hover:bg-slate-950 border ${activeLocationId === "gate-c" ? "border-red-500/40 bg-red-950/5" : "border-slate-800/50"} hover:border-red-500/20 text-left transition-all cursor-pointer`}
                         >
                            <span className="font-bold text-slate-200 flex items-center gap-2">
-                             <span className="w-1.5 h-1.5 rounded-full bg-red-500"></span> Gate C
+                             <span className="w-1 h-1 rounded-full bg-red-500"></span> Gate C
                            </span>
                            <span className="text-[10px] text-slate-400 font-mono">Near North Plaza</span>
                         </button>
@@ -1098,10 +1103,10 @@ export default function App() {
                             const loc = MARKED_LOCATIONS.find(l => l.id === "gate-d");
                             if (loc) selectLocation(loc);
                           }}
-                          className={`w-full flex justify-between items-center p-2.5 rounded-xl bg-slate-950/30 hover:bg-slate-950 border ${activeLocationId === "gate-d" ? "border-sky-500/40 bg-sky-950/5" : "border-slate-800/50"} hover:border-indigo-500/20 text-left transition-all cursor-pointer`}
+                          className={`w-full flex justify-between items-center p-2 rounded-xl bg-slate-950/30 hover:bg-slate-950 border ${activeLocationId === "gate-d" ? "border-sky-500/40 bg-sky-950/5" : "border-slate-800/50"} hover:border-indigo-500/20 text-left transition-all cursor-pointer`}
                         >
                            <span className="font-bold text-slate-200 flex items-center gap-2">
-                             <span className="w-1.5 h-1.5 rounded-full bg-sky-500"></span> Gate D
+                             <span className="w-1 h-1 rounded-full bg-sky-500"></span> Gate D
                            </span>
                            <span className="text-[10px] text-slate-400 font-mono">West Concourse</span>
                         </button>
@@ -1170,13 +1175,13 @@ export default function App() {
                           </div>
 
                           <div className={`flex flex-col max-w-[85%] ${isUser ? "items-end" : "items-start"}`}>
-                            <div className="flex items-center gap-1.5 mb-1 text-[10px] text-slate-500 font-mono">
+                            <div className="flex items-center gap-1 mb-1 text-[10px] text-slate-500 font-mono">
                               <span>{isUser ? "You" : "Arena Bot"}</span>
                               <span>•</span>
                               <span>{msg.timestamp}</span>
                             </div>
                             <div 
-                              className={`p-3.5 rounded-2xl text-xs md:text-sm leading-relaxed border ${
+                              className={`p-3 rounded-2xl text-xs md:text-sm leading-relaxed border ${
                                 isUser 
                                   ? "bg-indigo-600 border-indigo-500 text-white rounded-tr-none shadow-indigo-500/5" 
                                   : "bg-slate-900 border-slate-800 text-slate-200 rounded-tl-none"
@@ -1198,10 +1203,10 @@ export default function App() {
                       </div>
                       <div className="flex flex-col items-start max-w-[80%]">
                         <span className="text-[10px] text-slate-500 font-mono mb-1">Searching Grounded JSON...</span>
-                        <div className="bg-slate-900 border border-slate-800 p-3.5 rounded-2xl rounded-tl-none shadow-sm flex items-center gap-1.5">
-                          <span className="w-1.5 h-1.5 rounded-full bg-indigo-500 animate-bounce delay-75"></span>
-                          <span className="w-1.5 h-1.5 rounded-full bg-indigo-500 animate-bounce delay-150"></span>
-                          <span className="w-1.5 h-1.5 rounded-full bg-indigo-500 animate-bounce delay-225"></span>
+                        <div className="bg-slate-900 border border-slate-800 p-3 rounded-2xl rounded-tl-none shadow-sm flex items-center gap-1">
+                          <span className="w-1 h-1 rounded-full bg-indigo-500 animate-bounce delay-75"></span>
+                          <span className="w-1 h-1 rounded-full bg-indigo-500 animate-bounce delay-150"></span>
+                          <span className="w-1 h-1 rounded-full bg-indigo-500 animate-bounce delay-225"></span>
                         </div>
                       </div>
                     </div>
@@ -1213,11 +1218,11 @@ export default function App() {
                 {/* Local chat error */}
                 {apiError && (
                   <div className="bg-red-950/40 border-y border-red-900/60 py-3 px-4 flex items-center gap-3 text-xs text-red-300" role="alert">
-                    <AlertCircle className="w-4.5 h-4.5 shrink-0 text-red-500" aria-hidden="true" />
+                    <AlertCircle className="w-4 h-4 shrink-0 text-red-500" aria-hidden="true" />
                     <div className="flex-1 font-mono">{apiError}</div>
                     <button 
                       onClick={() => setApiError(null)}
-                      className="text-[10px] uppercase tracking-wider font-bold text-red-400 hover:text-red-300 border border-red-500/20 rounded px-1.5 py-0.5 bg-red-950/20 focus:outline-none"
+                      className="text-[10px] uppercase tracking-wider font-bold text-red-400 hover:text-red-300 border border-red-500/20 rounded px-1 py-0 bg-red-950/20 focus:outline-none"
                     >
                       Dismiss
                     </button>
@@ -1232,7 +1237,7 @@ export default function App() {
                   }}
                   className="p-4 bg-slate-900/80 border-t border-slate-850 shrink-0"
                 >
-                  <div className="flex items-center bg-slate-950 border border-slate-800 focus-within:border-indigo-500 rounded-xl p-1.5 transition-all">
+                  <div className="flex items-center bg-slate-950 border border-slate-800 focus-within:border-indigo-500 rounded-xl p-1 transition-all">
                     <input
                       ref={chatInputRef}
                       type="text"
@@ -1249,7 +1254,7 @@ export default function App() {
                       className="w-9 h-9 bg-indigo-600 hover:bg-indigo-500 disabled:bg-slate-900 disabled:text-slate-700 rounded-lg flex items-center justify-center transition-colors shrink-0 text-white cursor-pointer"
                       aria-label="Send message"
                     >
-                      <Send className="h-4.5 w-4.5" />
+                      <Send className="h-4 w-4" />
                     </button>
                   </div>
                 </form>
@@ -1259,7 +1264,7 @@ export default function App() {
               <section className="lg:col-span-4 flex flex-col gap-5">
                 <div className="bg-slate-900 border border-slate-800 rounded-3xl p-5 flex flex-col justify-between h-full">
                   <div>
-                    <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest font-mono mb-4 flex items-center gap-1.5">
+                    <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest font-mono mb-4 flex items-center gap-1">
                       <Bot className="w-4 h-4 text-indigo-400" /> Chat Controls
                     </h3>
                     <p className="text-xs text-slate-300 mb-5 leading-relaxed font-sans">
@@ -1267,7 +1272,7 @@ export default function App() {
                     </p>
                     <button
                       onClick={handleClearChat}
-                      className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold text-red-400 bg-red-500/5 hover:bg-red-500/10 border border-red-500/25 hover:border-red-500/40 transition-all cursor-pointer shadow-sm"
+                      className="w-full inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl text-xs font-bold text-red-400 bg-red-500/5 hover:bg-red-500/10 border border-red-500/25 hover:border-red-500/40 transition-all cursor-pointer shadow-sm"
                       aria-label="Clear chat"
                     >
                       <Trash2 className="w-4 h-4 text-red-400" />
@@ -1282,9 +1287,9 @@ export default function App() {
                         <button
                           key={index}
                           onClick={() => handleSendMessage(suggestion.text)}
-                          className="text-left w-full p-2.5 rounded-xl border border-slate-800/80 hover:border-indigo-500 bg-slate-950/30 hover:bg-indigo-950/10 text-slate-300 text-xs transition-all cursor-pointer font-medium flex items-center gap-2"
+                          className="text-left w-full p-2 rounded-xl border border-slate-800/80 hover:border-indigo-500 bg-slate-950/30 hover:bg-indigo-950/10 text-slate-300 text-xs transition-all cursor-pointer font-medium flex items-center gap-2"
                         >
-                          <suggestion.icon className="w-3.5 h-3.5 text-indigo-400 shrink-0" />
+                          <suggestion.icon className="w-3 h-3 text-indigo-400 shrink-0" />
                           <span className="truncate">{suggestion.text}</span>
                         </button>
                       ))}
@@ -1321,7 +1326,7 @@ export default function App() {
                 >
                   <div>
                     <p className="text-[10px] text-indigo-400 font-mono font-bold uppercase tracking-wider mb-1 flex items-center gap-1">
-                      <Accessibility className="w-3.5 h-3.5" /> Designated Access
+                      <Accessibility className="w-3 h-3" /> Designated Access
                     </p>
                     <h3 className="text-lg font-bold text-slate-100 group-hover:text-indigo-300 transition-colors">Gate D</h3>
                     <p className="text-[10px] text-slate-400 mt-1 font-mono">Wheelchair ramp & elevators</p>
@@ -1344,7 +1349,7 @@ export default function App() {
                 >
                   <div>
                     <p className="text-[10px] text-red-400 font-mono font-bold uppercase tracking-wider mb-1 flex items-center gap-1">
-                      <Activity className="w-3.5 h-3.5" /> First Aid Stations
+                      <Activity className="w-3 h-3" /> First Aid Stations
                     </p>
                     <h3 className="text-lg font-bold text-slate-100 group-hover:text-red-300 transition-colors">Gate C & Sec 215</h3>
                     <p className="text-[10px] text-slate-400 mt-1 font-mono">Emergency EMT medical stations</p>
@@ -1358,7 +1363,7 @@ export default function App() {
                 <div className="text-left bg-slate-900 border border-slate-800 rounded-2xl p-4 flex items-center justify-between">
                   <div>
                     <p className="text-[10px] text-slate-400 font-mono font-bold uppercase tracking-wider mb-1 flex items-center gap-1">
-                      <Layers className="w-3.5 h-3.5 text-indigo-400" /> Grounded Database
+                      <Layers className="w-3 h-3 text-indigo-400" /> Grounded Database
                     </p>
                     <h3 className="text-lg font-bold text-slate-100">21 Coordinates</h3>
                     <p className="text-[10px] text-slate-400 mt-1 font-mono">100% matched offline layout</p>
@@ -1375,12 +1380,12 @@ export default function App() {
                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                   <div>
                     <h3 className="text-base font-bold text-white tracking-tight">Arena Location Directory</h3>
-                    <p className="text-xs text-slate-400 mt-0.5">Filter, search, or pin any of the 21 verified offline points onto the map.</p>
+                    <p className="text-xs text-slate-400 mt-0">Filter, search, or pin any of the 21 verified offline points onto the map.</p>
                   </div>
 
                   {/* Search input */}
                   <div className="relative w-full md:w-80">
-                    <Search className="absolute left-3.5 top-2.5 h-4 w-4 text-slate-500" />
+                    <Search className="absolute left-3 top-2 h-4 w-4 text-slate-500" />
                     <input
                       type="text"
                       value={searchQuery}
@@ -1396,7 +1401,7 @@ export default function App() {
                 <div className="flex flex-wrap gap-2 border-b border-slate-800/80 pb-4">
                   <button
                     onClick={() => setActiveCategory("all")}
-                    className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all cursor-pointer ${
+                    className={`px-3 py-1 rounded-lg text-xs font-medium transition-all cursor-pointer ${
                       activeCategory === "all" ? "bg-indigo-600 text-white" : "bg-slate-950 text-slate-400 hover:text-white border border-slate-800"
                     }`}
                   >
@@ -1404,7 +1409,7 @@ export default function App() {
                   </button>
                   <button
                     onClick={() => setActiveCategory("gates")}
-                    className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all cursor-pointer ${
+                    className={`px-3 py-1 rounded-lg text-xs font-medium transition-all cursor-pointer ${
                       activeCategory === "gates" ? "bg-indigo-600 text-white" : "bg-slate-950 text-slate-400 hover:text-white border border-slate-800"
                     }`}
                   >
@@ -1412,7 +1417,7 @@ export default function App() {
                   </button>
                   <button
                     onClick={() => setActiveCategory("food")}
-                    className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all cursor-pointer ${
+                    className={`px-3 py-1 rounded-lg text-xs font-medium transition-all cursor-pointer ${
                       activeCategory === "food" ? "bg-indigo-600 text-white" : "bg-slate-950 text-slate-400 hover:text-white border border-slate-800"
                     }`}
                   >
@@ -1420,7 +1425,7 @@ export default function App() {
                   </button>
                   <button
                     onClick={() => setActiveCategory("restrooms")}
-                    className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all cursor-pointer ${
+                    className={`px-3 py-1 rounded-lg text-xs font-medium transition-all cursor-pointer ${
                       activeCategory === "restrooms" ? "bg-indigo-600 text-white" : "bg-slate-950 text-slate-400 hover:text-white border border-slate-800"
                     }`}
                   >
@@ -1428,7 +1433,7 @@ export default function App() {
                   </button>
                   <button
                     onClick={() => setActiveCategory("others")}
-                    className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all cursor-pointer ${
+                    className={`px-3 py-1 rounded-lg text-xs font-medium transition-all cursor-pointer ${
                       activeCategory === "others" ? "bg-indigo-600 text-white" : "bg-slate-950 text-slate-400 hover:text-white border border-slate-800"
                     }`}
                   >
@@ -1446,13 +1451,13 @@ export default function App() {
                     >
                       <div>
                         <div className="flex items-center justify-between mb-2">
-                          <span className={`text-[9px] font-bold font-mono px-2 py-0.5 rounded ${loc.badgeBg} ${loc.textColor} border ${loc.borderColor}`}>
+                          <span className={`text-[9px] font-bold font-mono px-2 py-0 rounded ${loc.badgeBg} ${loc.textColor} border ${loc.borderColor}`}>
                             {loc.type}
                           </span>
                           <span className="text-[9px] font-mono text-slate-600 uppercase font-semibold">{loc.size} hotspot</span>
                         </div>
 
-                        <h4 className="text-sm font-bold text-white tracking-tight flex items-center gap-1.5 mb-1.5">
+                        <h4 className="text-sm font-bold text-white tracking-tight flex items-center gap-1 mb-1">
                           <loc.icon className="w-4 h-4 text-slate-400" />
                           {loc.name}
                         </h4>
@@ -1461,9 +1466,9 @@ export default function App() {
                           {loc.details}
                         </p>
 
-                        <div className="flex flex-wrap gap-1.5 mb-4">
+                        <div className="flex flex-wrap gap-1 mb-4">
                           {loc.features.map((feat, i) => (
-                            <span key={i} className="text-[9px] px-1.5 py-0.5 rounded bg-slate-900 border border-slate-800 text-slate-300">
+                            <span key={i} className="text-[9px] px-1 py-0 rounded bg-slate-900 border border-slate-800 text-slate-300">
                               {feat}
                             </span>
                           ))}
@@ -1476,7 +1481,7 @@ export default function App() {
                             selectLocation(loc);
                             setActiveTab("home");
                           }}
-                          className="flex-1 text-center py-1.5 rounded-lg bg-slate-900 hover:bg-slate-850 border border-slate-800 text-slate-300 text-[10px] font-bold transition-all cursor-pointer"
+                          className="flex-1 text-center py-1 rounded-lg bg-slate-900 hover:bg-slate-850 border border-slate-800 text-slate-300 text-[10px] font-bold transition-all cursor-pointer"
                         >
                           Pin on Map
                         </button>
@@ -1484,7 +1489,7 @@ export default function App() {
                           onClick={() => {
                             queryLocation(loc);
                           }}
-                          className="flex-1 text-center py-1.5 rounded-lg bg-indigo-600/10 hover:bg-indigo-600 border border-indigo-500/20 hover:border-indigo-500 text-indigo-400 hover:text-white text-[10px] font-bold transition-all cursor-pointer"
+                          className="flex-1 text-center py-1 rounded-lg bg-indigo-600/10 hover:bg-indigo-600 border border-indigo-500/20 hover:border-indigo-500 text-indigo-400 hover:text-white text-[10px] font-bold transition-all cursor-pointer"
                         >
                           Ask AI Bot
                         </button>
@@ -1542,7 +1547,7 @@ export default function App() {
                         className="w-full text-left p-4 md:p-5 flex items-center justify-between gap-4 font-sans font-bold text-xs md:text-sm text-slate-200 hover:text-white focus:outline-none cursor-pointer"
                         aria-expanded={isExpanded}
                       >
-                        <span className="flex items-center gap-2.5">
+                        <span className="flex items-center gap-2">
                           <HelpCircle className="w-4 h-4 text-indigo-400 shrink-0" />
                           <span>{faq.q}</span>
                         </span>
@@ -1560,9 +1565,9 @@ export default function App() {
                           <div className="flex justify-end">
                             <button
                               onClick={() => handleSendMessage(faq.query)}
-                              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold transition-all cursor-pointer"
+                              className="inline-flex items-center gap-1 px-3 py-1 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold transition-all cursor-pointer"
                             >
-                              <Sparkles className="w-3.5 h-3.5" />
+                              <Sparkles className="w-3 h-3" />
                               Ask Guide for Directions
                             </button>
                           </div>
