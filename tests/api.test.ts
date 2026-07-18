@@ -97,14 +97,14 @@ describe("Stadium Assist AI API Tests", () => {
     assert.strictEqual(body.error, "Invalid JSON payload");
   });
 
-  test("Tabs endpoint returns 200 and matches the 4-tab schema (GET /api/tabs)", async () => {
+  test("Tabs endpoint returns 200 and matches the 5-tab schema (GET /api/tabs)", async () => {
     const res = await fetch(`${baseUrl}/api/tabs`);
     assert.strictEqual(res.status, 200);
     const body = await res.json() as any;
     assert.ok(body.tabs);
-    assert.strictEqual(body.tabs.length, 4);
+    assert.strictEqual(body.tabs.length, 5);
 
-    const expectedTabs = ["home", "chat", "dashboard", "faq"];
+    const expectedTabs = ["home", "chat", "dashboard", "faq", "ai-insights"];
     body.tabs.forEach((tab: any, idx: number) => {
       assert.strictEqual(tab.id, expectedTabs[idx]);
       assert.ok(tab.label);

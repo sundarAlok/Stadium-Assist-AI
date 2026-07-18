@@ -45,7 +45,8 @@ export async function createApp(disableVite = false) {
         { id: "home", label: "Home", icon: "MapPin", active: true },
         { id: "chat", label: "AI Chat", icon: "Bot", active: true },
         { id: "dashboard", label: "Dashboard", icon: "Activity", active: true },
-        { id: "faq", label: "FAQ", icon: "HelpCircle", active: true }
+        { id: "faq", label: "FAQ", icon: "HelpCircle", active: true },
+        { id: "ai-insights", label: "AI Insights", icon: "Sparkles", active: true }
       ]
     });
   });

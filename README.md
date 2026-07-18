@@ -32,7 +32,7 @@ Stadium Assist AI is a GenAI-enabled web application that helps fans, volunteers
 
 ## 🌐 Live Demo
 
-🔗 **Live Application:** [Add Live URL Here]
+🔗 **Live Application:** https://stadium-assist-ai.vercel.app/
 
 🔗 **GitHub Repository:** https://github.com/sundarAlok/Stadium-Assist-AI.git
 
@@ -150,6 +150,228 @@ If the AI provider becomes unavailable:
 - Automatic local search fallback
 - Stadium data remains accessible
 - No service interruption
+
+---
+
+## 🗺️ Interactive Stadium Intelligence Map
+
+The platform includes a visual stadium operations map that enables users to explore different operational layers across the venue.
+
+### Available Map Layers
+
+- Stadium Locations
+- Crowd Density Monitoring
+- Queue Monitoring
+- Gate Load Analytics
+- Accessibility Routes
+- Emergency Monitoring
+
+Users can switch between operational views using map filters for real-time situational awareness.
+
+---
+
+## 👥 Crowd Intelligence System
+
+AI-powered crowd monitoring provides:
+
+- Crowd density visualization
+- High-risk congestion detection
+- Concourse traffic analysis
+- Fan movement predictions
+- Peak arrival forecasting
+- Entry optimization recommendations
+
+### Example Insights
+
+- North Concourse congestion detected
+- Entry wait time prediction
+- Crowd flow efficiency analysis
+- Gate balancing recommendations
+
+---
+
+## 🚪 Gate Load Analytics
+
+The system continuously evaluates stadium entry capacity.
+
+### Features
+
+- Gate utilization monitoring
+- Fastest entry recommendations
+- Load balancing suggestions
+- Queue reduction predictions
+- Entry bottleneck identification
+
+### Tracked Gates
+
+- Gate A
+- Gate B
+- Gate C
+- Gate D
+- Gate E
+- Gate F
+- Gate G
+- Gate H
+
+---
+
+## ⏳ Queue Intelligence
+
+Real-time queue monitoring helps visitors avoid delays.
+
+### Capabilities
+
+- Queue length visualization
+- Estimated wait times
+- Dynamic routing recommendations
+- Queue risk prediction
+- Alternative gate suggestions
+
+Benefits:
+
+- Reduced waiting times
+- Improved crowd distribution
+- Better visitor experience
+
+---
+
+## 🚨 Emergency Operations Monitoring
+
+Stadium Assist AI includes a dedicated emergency intelligence layer.
+
+### Monitored Resources
+
+- Medical Stations
+- Emergency Exits
+- Fire Response Teams
+- Security Posts
+- Incident Monitoring Points
+- Operations Control Centers
+
+### Emergency Features
+
+- Incident awareness
+- Resource visibility
+- Emergency route assistance
+- Medical support guidance
+- Safety readiness monitoring
+
+---
+
+## ♿ Accessibility Intelligence Layer
+
+Accessibility is deeply integrated into the platform.
+
+### Accessibility Services
+
+- Wheelchair routes
+- Accessible entrances
+- Elevator navigation
+- Accessible restroom guidance
+- Accessibility support desks
+- Accessible seating locations
+
+### Accessibility Monitoring
+
+- Elevator operational status
+- Accessible route availability
+- Accessibility recommendations
+- Reduced walking-distance routing
+
+---
+
+## 🤖 AI Operations Command Center
+
+A dedicated AI dashboard provides operational intelligence for organizers and venue staff.
+
+### Operational Insights
+
+- Crowd Risk Scoring
+- Attendance Estimation
+- Queue Forecasting
+- Accessibility Recommendations
+- Emergency Readiness Assessment
+- Transportation Demand Forecasting
+
+### Readiness Metrics
+
+- Venue Readiness
+- Crowd Flow Readiness
+- Accessibility Readiness
+- Emergency Readiness
+- Transport Readiness
+
+---
+
+## 🚌 Transportation Intelligence
+
+The platform supports transportation planning and visitor movement.
+
+### Features
+
+- Shuttle demand prediction
+- Transport congestion analysis
+- Arrival forecasting
+- Departure flow monitoring
+- Public transport recommendations
+
+---
+
+## 🌱 Sustainability Intelligence
+
+AI-assisted sustainability monitoring includes:
+
+- Waste collection optimization
+- Energy efficiency recommendations
+- Resource utilization analysis
+- Environmental impact awareness
+
+---
+
+## 🌍 Multilingual Fan Support
+
+Designed for an international FIFA World Cup audience.
+
+### Supported Experiences
+
+- Multilingual assistance architecture
+- International visitor guidance
+- Cross-cultural accessibility support
+- Global fan navigation assistance
+
+Languages can be expanded for future deployments.
+
+---
+
+## 📊 Real-Time Stadium Operations Dashboard
+
+The operations dashboard provides:
+
+- Live operational KPIs
+- Attendance metrics
+- AI confidence scoring
+- Active alerts
+- Operational status indicators
+- Readiness scoring
+
+This allows organizers to monitor venue health from a single interface.
+
+---
+
+## 🏟️ FIFA World Cup Deployment Readiness
+
+The platform is designed to scale beyond a single venue.
+
+### Deployment Possibilities
+
+- Multiple stadiums
+- Tournament-wide operations
+- Volunteer coordination
+- Venue command centers
+- Fan assistance hubs
+- Transportation integration
+
+Making Stadium Assist AI suitable for large-scale international sporting events.
 
 ---
 
