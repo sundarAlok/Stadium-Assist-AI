@@ -1,0 +1,6 @@
+{
+  "name": "Stadium Assist AI",
+  "description": "An AI assistant that helps fans navigate the stadium using a local stadium knowledge base.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GROQ_API"]
+}

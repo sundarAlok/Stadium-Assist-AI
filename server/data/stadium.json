@@ -1,0 +1,164 @@
+{
+  "gates": [
+    {
+      "name": "Gate A",
+      "near": "Parking P1",
+      "details": "Primary entry gate located near Parking P1. Handles general access and coordinates with the main taxi drop-off terminal. Opens exactly 2 hours prior to scheduled event kickoff."
+    },
+    {
+      "name": "Gate B",
+      "near": "Metro Exit",
+      "details": "Conveniently located directly opposite the central Metro transit exit. Features heavy security checks and fast lane lanes."
+    },
+    {
+      "name": "Gate C",
+      "near": "North Plaza",
+      "details": "Located near the North Plaza, adjacent to the main Medical First Aid station."
+    },
+    {
+      "name": "Gate D",
+      "near": "West Concourse",
+      "details": "Located on the West side, designated as the primary Wheelchair Accessible Entrance."
+    }
+  ],
+  "food": [
+    {
+      "type": "Vegetarian",
+      "location": "Section 104",
+      "vendor": "Green Garden Grill",
+      "menu": ["Veggie Burgers", "Loaded Salads", "Fresh Hummus Cups"],
+      "details": "Main food hub with 100% vegetarian options and Gluten-Free alternatives."
+    },
+    {
+      "type": "Hot Dogs & Nachos",
+      "location": "Section 112",
+      "vendor": "Arena Bites",
+      "menu": ["Loaded Nachos", "Standard Hot Dogs", "Pretzels"],
+      "details": "Arena Bites snack stand for quick bites and soft beverages."
+    },
+    {
+      "type": "Halal",
+      "location": "Section 208",
+      "vendor": "Halal Eats",
+      "menu": ["Chicken Shawarma", "Halal Falafel", "Hummus Wraps"],
+      "details": "Halal certified dynamic menu options on the upper deck."
+    },
+    {
+      "type": "Gluten-Free",
+      "location": "Section 104",
+      "vendor": "Green Garden Grill",
+      "menu": ["Gluten-Free Buns", "GF Salad bowls"],
+      "details": "Safe allergy-friendly gluten-free options available."
+    }
+  ],
+  "restrooms": [
+    {
+      "location": "Section 110",
+      "gender": "All-Gender & Family",
+      "features": "Baby changing table available"
+    },
+    {
+      "location": "Section 220",
+      "gender": "Men and Women",
+      "features": "Accessible stalls available"
+    },
+    {
+      "location": "Section 204",
+      "gender": "All-Gender & Family",
+      "features": "Wheelchair accessible"
+    }
+  ],
+  "medical": [
+    {
+      "location": "Gate C",
+      "details": "Main First Aid Station, staffed by certified EMTs throughout the event."
+    },
+    {
+      "location": "Section 215",
+      "details": "Secondary First Aid Station for upper-level fans."
+    }
+  ],
+  "wheelchairEntrance": "Gate D",
+  "accessibility": {
+    "wheelchairAccessibleEntrance": "Gate D",
+    "elevators": [
+      {
+        "name": "Elevator 1",
+        "near": "Gate A",
+        "details": "General lift serving lower level terraces."
+      },
+      {
+        "name": "Elevator 3",
+        "near": "Gate C",
+        "serves": "Provides access to the Upper Concourse and Section 204"
+      }
+    ],
+    "restrooms": "Section 204 and Section 220 have accessible stalls"
+  },
+  "sections": [
+    {
+      "name": "Section 204",
+      "directions": "To reach Section 204, take Elevator 3 (near Gate C/First Aid) to the Upper Concourse level, turn left, and Section 204 will be immediately visible next to Section 202."
+    },
+    {
+      "name": "Section 104",
+      "directions": "Located on the Lower Concourse, near Gate A. Just walk straight from the entrance and turn right."
+    }
+  ],
+  "additionalLocations": [
+    {
+      "name": "Main Stage",
+      "type": "Event Field",
+      "details": "Centrally located stadium stage area for concerts and special events. Access strictly requires a field-access VIP wristband.",
+      "features": ["Concert Stage", "Media Box", "Acoustic Arrays"]
+    },
+    {
+      "name": "Parking P1",
+      "type": "VIP & Staff Parking",
+      "details": "Main vehicle parking area located outside Gate A. Has reserved spots for premium passes and tournament sponsors.",
+      "features": ["Sponsor parking", "EV Charging Station", "Valet Lanes"]
+    },
+    {
+      "name": "Merchandise Stand A",
+      "type": "Official Team Gear",
+      "details": "Largest retail outlet in the arena located near Gate B. Sells official jerseys, flags, scarfs, and custom merchandise.",
+      "features": ["Team Jerseys", "Matchday Programs", "Custom Printing"]
+    },
+    {
+      "name": "Merchandise Stand B",
+      "type": "Upper Level Souvenirs",
+      "details": "Secondary souvenirs counter located near Section 204. Perfect for upper level ticket holders looking to bypass main floor queues.",
+      "features": ["Caps & Beanies", "Matchday Scarfs", "Water Bottles"]
+    },
+    {
+      "name": "Lost & Found",
+      "type": "Fan Services",
+      "details": "Central guest services and lost & found office located inside the Gate A main lobby. Open up to 1 hour after matches.",
+      "features": ["Lost Item Log", "Lost Children Help", "Complimentary earplugs"]
+    },
+    {
+      "name": "Bike Racks Area",
+      "type": "Eco Transit Parking",
+      "details": "Complimentary secured bicycle lock station situated right outside Gate B Metro Exit. Highly monitored by transit security.",
+      "features": ["50+ Bike Slots", "Secure Railings", "CCTV Monitored"]
+    },
+    {
+      "name": "Taxi Dropoff Zone",
+      "type": "Ride Share Hub",
+      "details": "Dedicated pick-up and drop-off lane situated opposite Gate A parking lanes. Coordinates directly with ride-share applications.",
+      "features": ["Quick Drop", "Rideshare bays", "Safe crosswalk"]
+    },
+    {
+      "name": "ATM Terminal West",
+      "type": "Cash Dispenser",
+      "details": "Multi-bank ATM withdrawal terminal situated near the Gate D concourse corridor. Accepts all major debit and credit cards.",
+      "features": ["All Debit Cards", "Receipt Printer", "Low Fee Access"]
+    },
+    {
+      "name": "Water Hydration Station",
+      "type": "Free Refills",
+      "details": "Complimentary filtered chilled water bottle refill station located directly next to the Section 110 restrooms.",
+      "features": ["Filtered Water", "Chilled dispenser", "Bottle sensor"]
+    }
+  ]
+}
