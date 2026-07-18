@@ -1,4 +1,3 @@
-````md
 # Stadium Assist AI 🏟️🤖
 
 > AI-powered stadium navigation and fan assistance platform built for the FIFA World Cup 2026 experience.
@@ -35,23 +34,23 @@ Stadium Assist AI is a GenAI-enabled web application that helps fans, volunteers
 
 🔗 **Live Application:** [Add Live URL Here]
 
-🔗 **GitHub Repository:** [Add Repository URL Here]
+🔗 **GitHub Repository:** https://github.com/sundarAlok/Stadium-Assist-AI.git
 
 ---
 
 ## 📸 Screenshots
 
 ### Home Interface
-![Home Screen](./screenshots/home.png)
+![Home Screen](assets/screenshots/home.png)
 
 ### AI Assistant Chat
-![Chat Interface](./screenshots/chat.png)
+![Chat Interface](assets/screenshots/aichat.png)
 
-### Quick Stadium Navigation
-![Navigation](./screenshots/navigation.png)
+### Quick Stadium Dashboard
+![Dashboard](assets/screenshots/dashboard.png)
 
 ### Accessibility Assistance
-![Accessibility](./screenshots/accessibility.png)
+![Faq](assets/screenshots/faq.png)
 
 > Place screenshots inside `/screenshots` folder and update paths if necessary.
 
@@ -526,4 +525,3 @@ Fail: 0
 Built for the **Promptwars Hackathon**.
 
 Empowering fans with AI-driven stadium experiences for the FIFA World Cup 2026.
-````
