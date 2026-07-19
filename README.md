@@ -208,10 +208,6 @@ The system continuously evaluates stadium entry capacity.
 - Gate B
 - Gate C
 - Gate D
-- Gate E
-- Gate F
-- Gate G
-- Gate H
 
 ---
 
